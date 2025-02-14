@@ -1,0 +1,2 @@
+# HSI_3D_Object_Reconstruction
+About Supplemental material for the paper "EXPLORING 3D OBJECT RECONSTRUCTION THROUGH INTEGRATION OF HYPERSPECTRAL AND RGB-D IMAGING"
