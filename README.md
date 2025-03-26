@@ -1,31 +1,111 @@
 <h1 align="center"> 3D Object Reconstruction Through Integration of Hyperspectral and RGB-D Imaging </h1>
 
-## Abstract
+## 📄 Abstract
 
-This work explores the integration of RGB-D and hyperspectral imaging technologies to enhance the accuracy of 3D reconstructions. We propose a methodology that combines depth maps from an RGB-D camera with spectral data from a hyperspectral camera to develop a detailed 3D hyperspectral point cloud model. Our approach applies dense direct calibration techniques to improve the alignment between RGB-D and hyperspectral data, building upon a calibrated stereo-camera setup to capture both geometric and spectral details. We discuss challenges related to data alignment and the extraction and fusion of feature points across multiple spectral bands. 3D reconstruction with the hyperspectral data experiments are conducted on commonly used objects in literature and compared with the publicly available ground-truth 3D point clouds of these objects. Utilizing full spectral information consistently demonstrated superior reconstruction accuracy both quantitatively and qualitatively compared to the reduced spectral representations (i.e. three band selected false-color images or band averaged images).
+This work explores the integration of RGB-D and hyperspectral imaging technologies to enhance the accuracy of 3D reconstructions. We propose a methodology that combines depth maps from an RGB-D camera with spectral data from a hyperspectral camera to develop a detailed 3D hyperspectral point cloud model. 
 
+## 🔬 Research Methodology
 
-Repository Structure
+### Spectral Processing Approaches
+1. **HSI_Mean**: Averaging all spectral bands to create grayscale images
+2. **HSI_False Color**: Extracting three specific bands (435nm, 545nm, 700nm)
+3. **HSI_All**: Utilizing all available spectral bands (400-800nm with 5nm intervals)
 
-Evaluation
+## 🧩 Dataset
 
-The Evaluation folder contains code for quantitative evaluation of the different objects in our dataset.
+Our dataset comprises hyperspectral images of diverse objects:
+- Cracker Box (rectangular)
+- Chips Can (cylindrical)
+- Power Drill (irregular-shaped)
+- Wood Block (wooden surface)
 
-The evaluation includes:
-- 1_Feature_Matching_All: Feature matching results using all spectral bands (HSI_All)
-- 1_Feature_Matching_False Color: Feature matching results using three specific bands (435nm, 545nm, 700nm) to create RGB representation
-- 1_Feature_Matching_Mean: Feature matching results using grayscale images created by averaging all spectral bands
-- 2_Registration_All: Registration results using all spectral bands (HSI_All)
-- 2_Registration_False Color: Registration results using three specific bands (RGB representation)
-- 2_Registration_Mean: Registration results using grayscale images
+## Prerequisites
+- Python 3.8+
+- OpenCV
+- NumPy
+- Open3D
+- Required libraries: `pip install opencv-python numpy open3d`
 
-Dataset
+## 🚀 Quick Start Guide
+## Step 1: Feature Matching
 
-Our dataset contains hyperspectral images (400-800nm range with 5nm intervals) of various objects including a rectangular-shaped Cracker box, a cylindrical Chips can, an irregular-shaped Power drill, and a wooden-surfaced Wood block for comprehensive evaluation.
+### Running the Script
+1. Navigate to the script directory
+2. Run `python 1_Feature_Matching_All.py`
 
-Pipeline
+### Object Selection
+When prompted, you'll see available objects:
+```
+Available objects:
+1. Chips can (26 frames)
+2. Cracker box (25 frames)
+3. Power drill (29 frames)
+4. Wood block (24 frames)
+```
 
-Our pipeline implements a 3D reconstruction approach using hyperspectral imaging data processed in three different ways:
-1. HSI_Mean: Averaging all spectral bands to create grayscale images
-2. HSI_False Color: Extracting three bands (435nm, 545nm, 700nm) according to CIE standards
-3. HSI_All: Utilizing all available spectral bands
+### Recommended First Run
+- Select object: `2` (Cracker box)
+- Distance threshold: `10`
+
+### What Happens
+- The script processes hyperspectral image bands
+- Performs feature matching between consecutive frames
+- Computes transformation matrices
+- Saves transformation data in `transformation/all/Cracker box/`
+
+### Output
+- Multiple `.npz` files containing:
+  - Transformation matrix
+  - Fitness score
+  - Number of valid matches
+  - Distance threshold used
+
+## Step 2: Point Cloud Registration
+
+### Running the Script
+1. Ensure feature matching results exist
+2. Run `python 2_Registration_All.py`
+3. Select the same object as in Step 1 (Cracker box)
+
+### What Happens
+- Converts depth and RGB images to point clouds
+- Applies transformations from Step 1
+- Performs global optimization
+- Removes outliers and downsamples point clouds
+
+### Output
+The script generates a final point cloud file:
+`results/all/Cracker box/3_final_result_All.ply`
+
+## 📊 Performance Metrics
+
+### Chamfer Distance
+- Bidirectional similarity metric between point clouds
+- Measures average minimum point-to-point distances
+
+### Hausdorff Distance
+- Maximum distance between point sets
+- Captures worst-case point displacement
+
+Metrics assess reconstruction accuracy across spectral processing approaches:
+- HSI_Mean
+- HSI_False Color
+- HSI_All
+
+## 🖥️ Visualization
+
+Recommended Tools:
+- CloudCompare
+- MeshLab
+- Blender
+
+## 📄 License
+
+[Specify license]
+
+## 📚 Citation
+
+If you use this work in your research, please cite:
+```
+[Publication Details]
+```
