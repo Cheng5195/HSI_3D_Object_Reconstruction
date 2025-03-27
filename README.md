@@ -13,7 +13,12 @@ This work explores the integration of RGB-D and hyperspectral imaging technologi
 
 ## 🧩 Dataset
 
+
+<p align="left">
+  <img src="Evaluation/image3.png" style="width: 50%;">
+</p>
 Our dataset comprises hyperspectral images of diverse objects:
+
 - Cracker Box (rectangular)
 - Chips Can (cylindrical)
 - Power Drill (irregular-shaped)
