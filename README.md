@@ -77,7 +77,13 @@ Available objects:
 The script generates a final point cloud file:
 `results/all/Cracker box/3_final_result_All.ply`
 
-<img src="https://raw.githubusercontent.com/Cheng5195/HSI_3D_Object_Reconstruction/main/Evaluation/output1.gif" width="600" alt="Reconstruction Output">
+<p align="center">
+  <img src="Evaluation/output1.gif" width="400px">
+</p>
+
+
+
+
 
 ## 📊 Performance Metrics
 
