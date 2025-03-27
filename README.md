@@ -77,9 +77,8 @@ Available objects:
 The script generates a final point cloud file:
 `results/all/Cracker box/3_final_result_All.ply`
 
-<p align="center">
-  <img src="Evaluation/output1.gif" width="400px">
-</p>
+![](Evaluation/Cracker%20box.gif)
+
 
 
 
