@@ -13,16 +13,24 @@ This work explores the integration of RGB-D and hyperspectral imaging technologi
 
 ## 🧩 Dataset
 
-
 <p align="left">
   <img src="Evaluation/image3.png" style="width: 50%;">
 </p>
+
+### Dataset Composition
 Our dataset comprises hyperspectral images of diverse objects:
 
 - Cracker Box (rectangular)
 - Chips Can (cylindrical)
 - Power Drill (irregular-shaped)
 - Wood Block (wooden surface)
+
+### Data Access
+- **Download Link**: [Hyperspectral Image Dataset](https://extra.u-picardie.fr/nextcloud/index.php/s/85AFBNLYx88JFqt)
+- **Instructions**:
+  1. Download the compressed dataset
+  2. Extract files to the same directory as your project code
+  3. Ensure file paths are correctly configured in your scripts
 
 ## Prerequisites
 - Python 3.8+
@@ -86,30 +94,62 @@ The script generates a final point cloud file:
 
 
 
+## 📊 Performance Metrics and Quantitative Evaluation
 
+#### 1. Chamfer Distance
+- **Definition**: Bidirectional similarity metric between point clouds
+- **Calculation**: Computes average minimum point-to-point distances
 
+#### 2. Hausdorff Distance
+- **Definition**: Maximum distance between point sets
+- **Calculation**: Captures worst-case point displacement
 
-## 📊 Performance Metrics
-
-### Chamfer Distance
-- Bidirectional similarity metric between point clouds
-- Measures average minimum point-to-point distances
-
-### Hausdorff Distance
-- Maximum distance between point sets
-- Captures worst-case point displacement
-
-Metrics assess reconstruction accuracy across spectral processing approaches:
+### Evaluation Approaches
+The quantitative evaluation compares generated point clouds against ground truth (GT) using three spectral processing techniques:
 - HSI_Mean
 - HSI_False Color
 - HSI_All
 
-## 🖥️ Visualization
+### Running Quantitative Evaluation
 
-Recommended Tools:
-- CloudCompare
-- MeshLab
-- Blender
+#### Prerequisites
+- Ensure Python environment with required libraries:
+  - open3d
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+
+#### Execution Steps
+1. Navigate to the Evaluation directory
+2. Run the specific evaluation script:
+   ```bash
+   python Quantitative_evaluation_Cracker_box.py
+   ```
+
+#### Expected Output
+The script will:
+- Load ground truth point cloud
+- Process generated point clouds
+- Compute Chamfer and Hausdorff distances
+- Display comparative metrics
+
+### Metric Interpretation
+- Lower Chamfer Distance: Better reconstruction accuracy
+- Lower Hausdorff Distance: More consistent point cloud mapping
+- Point Count: Indicates reconstruction density
+
+## 🖥️ Visualization Tools
+
+Recommended Tools for Point Cloud and 3D Data Visualization:
+
+1. **CloudCompare**
+   - Download: [Official CloudCompare Website](https://www.cloudcompare.org/)
+
+
+2. **MeshLab**
+   - Download: [MeshLab Official Site](https://www.meshlab.net/#download)
+
 
 ## 📄 License
 
