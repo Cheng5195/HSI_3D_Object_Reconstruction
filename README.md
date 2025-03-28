@@ -113,12 +113,11 @@ The quantitative evaluation compares generated point clouds against ground truth
 ### Running Quantitative Evaluation
 
 #### Prerequisites
-- Ensure Python environment with required libraries:
-  - open3d
-  - numpy
-  - scikit-learn
-  - matplotlib
-  - seaborn
+- open3d
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
 
 #### Execution Steps
 1. Navigate to the Evaluation directory
@@ -152,8 +151,7 @@ Recommended Tools for Point Cloud and 3D Data Visualization:
 
 
 ## 📄 License
-
-[Specify license]
+This project is licensed under the MIT License.
 
 ## 📚 Citation
 
