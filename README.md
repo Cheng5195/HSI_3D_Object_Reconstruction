@@ -25,12 +25,7 @@ Our dataset comprises hyperspectral images of diverse objects:
 - Power Drill (irregular-shaped)
 - Wood Block (wooden surface)
 
-### Data Access
-- **Download Link**: [Hyperspectral Image Dataset](https://extra.u-picardie.fr/nextcloud/index.php/s/85AFBNLYx88JFqt)
-- **Instructions**:
-  1. Download the compressed dataset
-  2. Extract files to the same directory as your project code
-  3. Ensure file paths are correctly configured in your scripts
+## 📁 Project Structure & Setup
 
 ## Prerequisites
 - Python 3.8+
@@ -38,6 +33,28 @@ Our dataset comprises hyperspectral images of diverse objects:
 - NumPy
 - Open3D
 - Required libraries: `pip install opencv-python numpy open3d`
+
+### Recommended Directory Structure
+```
+/project_root
+├── Chips can/           # Chips can object data
+├── Cracker box/         # Cracker box object data
+├── Power drill/         # Power drill object data
+├── Wood block/          # Wood block object data
+├── Evaluation/          # Evaluation scripts
+├── results/             # Output results directory
+├── transformation/      # Transformation data
+├── 1_Feature_Matching_All
+├── 1_Feature_Matching_False_Color
+├── 1_Feature_Matching_Mean
+├── 2_Registration_All
+├── 2_Registration_False_Color
+├── 2_Registration_Mean
+└── [other script files]
+```
+### Setup Instructions
+1. Download the compressed hyperspectral dataset from [here](https://extra.u-picardie.fr/nextcloud/index.php/s/85AFBNLYx88JFqt)
+2. Extract all files to the same directory as your project code
 
 ## 🚀 Quick Start Guide
 ## Step 1: Feature Matching
