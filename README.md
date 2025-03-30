@@ -12,10 +12,7 @@ This work explores the integration of RGB-D and hyperspectral imaging technologi
 3. **HSI_All**: Utilizing all available spectral bands (400-800nm with 5nm intervals)
 
 ## 🧩 Dataset
-
-<p align="left">
-  <img src="Evaluation/image3.png" style="width: 50%;">
-</p>
+<img src="https://i.imgur.com/u1sSd2F.png" width="50%">
 
 ### Dataset Composition
 Our dataset comprises hyperspectral images of diverse objects:
@@ -107,8 +104,8 @@ Available objects:
 The script generates a final point cloud file:
 `results/all/Cracker box/3_final_result_All.ply`
 
-![](Evaluation/Cracker%20box.gif)
 
+<img src="https://i.imgur.com/643FmAg.gif">
 
 
 ## 📊 Performance Metrics and Quantitative Evaluation
