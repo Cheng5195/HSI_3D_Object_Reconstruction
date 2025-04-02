@@ -157,7 +157,6 @@ The script will:
 ### Metric Interpretation
 - Lower Chamfer Distance: Better reconstruction accuracy
 - Lower Hausdorff Distance: More consistent point cloud mapping
-- Point Count: Indicates reconstruction density
 
 ## 🖥️ Visualization Tools
 
