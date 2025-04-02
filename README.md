@@ -51,6 +51,8 @@ Our dataset comprises hyperspectral images of diverse objects:
 ```
 ### Setup Instructions
 1. Download the compressed hyperspectral dataset from [here](https://extra.u-picardie.fr/nextcloud/index.php/s/85AFBNLYx88JFqt)
+   - The **Image Dataset** folder contains the image data required for this code
+   - The **HSI RAW** folder contains the original hyperspectral data for reference purposes
 2. Extract all files to the same directory as your project code
 
 ## 🚀 Quick Start Guide
@@ -90,7 +92,7 @@ Available objects:
 ## Step 2: Point Cloud Registration
 
 ### Running the Script
-1. Ensure feature matching results exist
+1. Ensure feature matching results exist (outputs generated from Step 1) 
 2. Run `python 2_Registration_All.py`
 3. Select the same object as in Step 1 (Cracker box)
 
