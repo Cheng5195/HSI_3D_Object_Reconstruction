@@ -37,22 +37,27 @@ Our dataset comprises hyperspectral images of diverse objects:
 
 ### Recommended Directory Structure
 ```
-/project_root
-├── Image Dataset/
-│   ├── Chips can/           # Chips can object data
-│   ├── Cracker box/         # Cracker box object data
-│   ├── Power drill/         # Power drill object data
-│   └── Wood block/          # Wood block object data
-├── Evaluation/              # Evaluation scripts
-├── results/                 # Output results directory
-├── transformation/          # Transformation data
-├── 1_Feature_Matching_All
-├── 1_Feature_Matching_False_Color
-├── 1_Feature_Matching_Mean
-├── 2_Registration_All
-├── 2_Registration_False_Color
-├── 2_Registration_Mean
-└── [other script files]
+/project_root  
+├── Image Dataset/  
+│   ├── Chips can/           # Chips can object data  
+│   ├── Cracker box/         # Cracker box object data  
+│   ├── Power drill/         # Power drill object data  
+│   ├── Wood block/          # Wood block object data  
+│   └── Evaluation/          # Contains GT (reference point cloud) and generated object point clouds under three conditions  
+│       ├── GT/              # Ground truth reference point cloud  
+│       ├── All/             # Object point clouds generated under the "All" condition  
+│       ├── False_Color/     # Object point clouds generated under the "False Color" condition  
+│       └── Mean/            # Object point clouds generated under the "Mean" condition  
+├── Evaluation/              # Contains evaluation scripts  
+├── results/                 # Output results directory  
+├── transformation/          # Transformation data  
+├── 1_Feature_Matching_All  
+├── 1_Feature_Matching_False_Color  
+├── 1_Feature_Matching_Mean  
+├── 2_Registration_All  
+├── 2_Registration_False_Color  
+├── 2_Registration_Mean  
+└── [other script files]  
 ```
 ### Setup Instructions
 1. Download the compressed hyperspectral dataset from [here](https://extra.u-picardie.fr/nextcloud/index.php/s/85AFBNLYx88JFqt)
