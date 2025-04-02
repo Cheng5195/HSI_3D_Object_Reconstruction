@@ -283,18 +283,18 @@ def main():
         frame_num = i + 1  # Frame number starts from 1
         
         # Load selected bands from hyperspectral image
-        gray_folder = f'{object_name}/HSI/400_800nm/frame{frame_num}'
+        gray_folder = f'Image Dataset/{object_name}/HSI/400_800nm/frame{frame_num}'
         hsi_bands = load_hyperspectral_bands(gray_folder)
         hsi_bands_list.append(hsi_bands)
 
-        depth_path = f'{object_name}/HSI/depth/transformed_undistorted_depth_{frame_num}.png'
+        depth_path = f'Image Dataset/{object_name}/HSI/depth/transformed_undistorted_depth_{frame_num}.png'
         depth_img = cv2.imread(depth_path, cv2.IMREAD_UNCHANGED)
         if depth_img is None:
             raise ValueError(f"Could not read depth image: {depth_path}")
         depth_images.append(depth_img)
 
         # Create mask using the size of first band
-        json_path = f'{object_name}/HSI/mask/undistorted_hsi_{frame_num}.json'
+        json_path = f'Image Dataset/{object_name}/HSI/mask/undistorted_hsi_{frame_num}.json'
         roi_points = load_roi_from_json(json_path)
         mask = create_mask(hsi_bands[0].shape[:2], roi_points, depth_img)
         masks.append(mask)
