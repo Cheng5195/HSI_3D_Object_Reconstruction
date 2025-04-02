@@ -250,19 +250,19 @@ def main():
     # Loading image and depth data
     print("Loading images...")
     for i in range(1, num_images + 1):
-        gray_path = f'{object_name}/HSI/grayscale/image{i}.png'
+        gray_path = f'Image Dataset/{object_name}/HSI/grayscale/image{i}.png'
         gray_img = cv2.imread(gray_path, cv2.IMREAD_GRAYSCALE)
         if gray_img is None:
             raise ValueError(f"Could not read grayscale image: {gray_path}")
         grayscale_images.append(gray_img)
 
-        depth_path = f'{object_name}/HSI/Depth/transformed_undistorted_depth_{i}.png'
+        depth_path = f'Image Dataset/{object_name}/HSI/Depth/transformed_undistorted_depth_{i}.png'
         depth_img = cv2.imread(depth_path, cv2.IMREAD_UNCHANGED)
         if depth_img is None:
             raise ValueError(f"Could not read depth image: {depth_path}")
         depth_images.append(depth_img)
 
-        json_path = f'{object_name}/HSI/mask/undistorted_hsi_{i}.json'
+        json_path = f'Image Dataset/{object_name}/HSI/mask/undistorted_hsi_{i}.json'
         roi_points = load_roi_from_json(json_path)
         mask = create_mask(gray_img.shape[:2], roi_points, depth_img)
         masks.append(mask)
