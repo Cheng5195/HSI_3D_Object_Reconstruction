@@ -129,9 +129,9 @@ def main():
 
     print("Loading images and converting to point clouds...")
     for i in range(1, num_images + 1):
-        rgb_path = f'{object_name}/HSI/RGB/undistorted_hsi_{i}.png'
-        depth_path = f'{object_name}/HSI/Depth/transformed_undistorted_depth_{i}.png'
-        mask_path = f'{object_name}/HSI/mask/undistorted_hsi_{i}.json'
+        rgb_path = f'Image Dataset/{object_name}/HSI/RGB/undistorted_hsi_{i}.png'
+        depth_path = f'Image Dataset/{object_name}/HSI/Depth/transformed_undistorted_depth_{i}.png'
+        mask_path = f'Image Dataset/{object_name}/HSI/mask/undistorted_hsi_{i}.json'
         
         rgb_img = cv2.imread(rgb_path)
         depth_img = cv2.imread(depth_path, cv2.IMREAD_UNCHANGED)
