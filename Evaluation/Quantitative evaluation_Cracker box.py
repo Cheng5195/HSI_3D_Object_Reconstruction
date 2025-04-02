@@ -120,14 +120,14 @@ def evaluate_point_cloud(generated_pcd, truth_pcd, name=""):
 def main():
     # Load ground truth point cloud
     print("Loading reference point cloud...")
-    truth_pcd = load_point_cloud('GT/Cracker box.ply')
+    truth_pcd = load_point_cloud('../Image Dataset/Evaluation/GT/Cracker box.ply')
     print(f"Reference cloud: {len(truth_pcd.points)} points")
     
     # Generate list of point cloud files
     generated_files = [
-        'Mean/Cracker box/3_final_result_Mean.ply',
-        'False Color/Cracker box/3_final_result_False Color.ply',
-        'All/Cracker box/3_final_result_all.ply',
+        '../Image Dataset/Evaluation/Mean/Cracker box/3_final_result_Mean.ply',
+        '../Image Dataset/Evaluation/False Color/Cracker box/3_final_result_False Color.ply',
+        '../Image Dataset/Evaluation/All/Cracker box/3_final_result_all.ply',
     ]
     
     results = []
