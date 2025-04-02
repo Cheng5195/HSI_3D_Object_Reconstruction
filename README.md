@@ -46,7 +46,7 @@ Our dataset comprises hyperspectral images of diverse objects:
 │   └── Evaluation/          # Contains GT (reference point cloud) and generated object point clouds under three conditions  
 │       ├── GT/              # Ground truth reference point cloud  
 │       ├── All/             # Object point clouds generated under the "All" condition  
-│       ├── False_Color/     # Object point clouds generated under the "False Color" condition  
+│       ├── False Color/     # Object point clouds generated under the "False Color" condition  
 │       └── Mean/            # Object point clouds generated under the "Mean" condition  
 ├── Evaluation/              # Contains evaluation scripts  
 ├── results/                 # Output results directory  
