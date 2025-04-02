@@ -285,7 +285,7 @@ def main():
         hsi_bands = load_hyperspectral_bands(gray_folder)
         hsi_bands_list.append(hsi_bands)
 
-        depth_path = f'{Image Dataset/object_name}/HSI/depth/transformed_undistorted_depth_{frame_num}.png'
+        depth_path = f'Image Dataset/{object_name}/HSI/depth/transformed_undistorted_depth_{frame_num}.png'
         depth_img = cv2.imread(depth_path, cv2.IMREAD_UNCHANGED)
         if depth_img is None:
             raise ValueError(f"Could not read depth image: {depth_path}")
