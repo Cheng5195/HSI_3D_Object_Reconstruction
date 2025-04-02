@@ -26,10 +26,14 @@ Our dataset comprises hyperspectral images of diverse objects:
 
 ## Prerequisites
 - Python 3.8+
-- OpenCV
-- NumPy
-- Open3D
-- Required libraries: `pip install opencv-python numpy open3d`
+- Required libraries:
+  - OpenCV
+  - NumPy
+  - Open3D
+  - Matplotlib
+  - Seaborn
+  - Scikit-learn
+- Installation command: `pip install opencv-python numpy open3d matplotlib seaborn scikit-learn`
 
 ### Recommended Directory Structure
 ```
