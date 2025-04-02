@@ -140,8 +140,8 @@ def color_point_cloud_by_metric(pcd, values, colormap='viridis'):
 def main():
     # Load point clouds
     print("Loading point clouds...")
-    truth_pcd = load_point_cloud('GT/Wood block.ply')
-    generated_pcd = load_point_cloud('3_final_result_all_False Color.ply')
+    truth_pcd = load_point_cloud('../Image Dataset/Evaluation/GT/Wood block.ply')
+    generated_pcd = load_point_cloud('../Image Dataset/Evaluation/All/Wood block/3_final_result_all.ply')
     
     print(f"Reference cloud: {len(truth_pcd.points)} points")
     print(f"Generated cloud: {len(generated_pcd.points)} points")
@@ -190,9 +190,9 @@ def main():
     print("\nAligning point clouds...")
     aligned_generated_pcd, transformation = align_point_clouds(scaled_generated_pcd, truth_pcd)
     
-    # visualize
-    print("\nVisualizing aligned point clouds...")
-    visualize_point_cloud([truth_pcd, aligned_generated_pcd], "Aligned Point Clouds")
+    # # visualize
+    # print("\nVisualizing aligned point clouds...")
+    # visualize_point_cloud([truth_pcd, aligned_generated_pcd], "Aligned Point Clouds")
     
     print("\nComputing quality metrics...")
     truth_points = np.asarray(truth_pcd.points)
