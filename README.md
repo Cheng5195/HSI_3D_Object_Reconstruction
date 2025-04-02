@@ -34,13 +34,14 @@ Our dataset comprises hyperspectral images of diverse objects:
 ### Recommended Directory Structure
 ```
 /project_root
-├── Chips can/           # Chips can object data
-├── Cracker box/         # Cracker box object data
-├── Power drill/         # Power drill object data
-├── Wood block/          # Wood block object data
-├── Evaluation/          # Evaluation scripts
-├── results/             # Output results directory
-├── transformation/      # Transformation data
+├── Image Dataset/
+│   ├── Chips can/           # Chips can object data
+│   ├── Cracker box/         # Cracker box object data
+│   ├── Power drill/         # Power drill object data
+│   └── Wood block/          # Wood block object data
+├── Evaluation/              # Evaluation scripts
+├── results/                 # Output results directory
+├── transformation/          # Transformation data
 ├── 1_Feature_Matching_All
 ├── 1_Feature_Matching_False_Color
 ├── 1_Feature_Matching_Mean
