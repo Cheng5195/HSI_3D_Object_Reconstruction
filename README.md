@@ -50,7 +50,8 @@ Our dataset comprises hyperspectral images of diverse objects:
 │       └── Mean/            # Object point clouds generated under the "Mean" condition  
 ├── Evaluation/              # Contains evaluation scripts  
 ├── results/                 # Output results directory  
-├── transformation/          # Transformation data  
+├── transformation/          # Transformation data
+├── config.py                # Common configuration parameters
 ├── 1_Feature_Matching_All  
 ├── 1_Feature_Matching_False_Color  
 ├── 1_Feature_Matching_Mean  
