@@ -52,6 +52,11 @@ Our dataset comprises hyperspectral images of diverse objects:
 ├── results/                 # Output results directory  
 ├── transformation/          # Transformation data
 ├── config.py                # Common configuration parameters
+├── image_loader.py           # Defines a general-purpose class for image loading, mask creation, and other preprocessing.
+├── feature_matcher.py        # Defines a general-purpose class for feature point extraction, matching, and filtering.
+├── transformation_estimator.py # Defines a general-purpose class for 3D transformation matrix estimation and RANSAC.
+├── user_interface.py         # Defines a class to handle Command-Line Interface (CLI) interactions, such as object selection.
+├── registration_pipeline.py  # Module responsible for the main workflow of point cloud registration and global optimization.
 ├── 1_Feature_Matching_All  
 ├── 1_Feature_Matching_False_Color  
 ├── 1_Feature_Matching_Mean  
